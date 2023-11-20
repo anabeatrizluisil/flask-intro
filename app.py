@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 app.secret_key = 'my precious'
 
+# login required decorator
 def login_required(f):
     @wraps(f)
     def wrap(*args, **kwargs):
